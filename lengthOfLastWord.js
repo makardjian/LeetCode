@@ -1,4 +1,3 @@
-
 const lengthOfLastWord = (s) => {
   // splitting a string on an empty space will put all words into an array
   //but if there are more than one empty spaces, then it will make those empty string elements
