@@ -10,26 +10,6 @@ Example 1:
 Example 2:
   Input: haystack = "aaaaa", needle = "bba"
   Output: -1
-
-I: two strings
-O: boolean
-C: none
-E: 
-  / needle's length > haystack ==> return -1
-  / needle's length is 0 ==> return 0 
-  / haystack is empty string and needle is empty string ==> -1
-
-More Examples:
-  /str = 'This is a fun problem. This is a fantastic day.'
-  /subst= 'is a f' 
-
-Plan:
-/needle does not change
-/and any substring within the haystack must be the same length as needle
-/set first n chars of haystack equal to window variable 
-/itterate over the string starting at 1
-/ at each itteration delete first character from window, then add another charcter onto the windo
-/ end for loop at str.length <= strlength - needle.length;
 */
 
 var needleHayStack = function(haystack, needle) {
