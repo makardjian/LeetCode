@@ -22,7 +22,7 @@ Output:
 
 // Breadth First Search Implementation
 var invertTree = function(root) {
-  if (!root) return null;
+  if (!root) return root;
   let current, temp;
   let queue = [root];
   
@@ -40,5 +40,14 @@ var invertTree = function(root) {
     current.left = current.right;
     current.right = temp;
   }
+  return root;
+};
+
+// Recursive Depth First Search Solution
+var invertTree = function(root) {
+  if (root === null) return root;
+  let temp = root.right;
+  root.right = invertTree(root.left);
+  root.left = invertTree(temp);
   return root;
 };
